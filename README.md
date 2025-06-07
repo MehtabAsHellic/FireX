@@ -10,8 +10,8 @@
   - Cost-effective and reliable fire safety solution
 - **Hardware**: Arduino, ESP32, ESP32-CAM with OV2640 camera module
 - **Project Achievement**:
-  - [Certificate](https://mehtabk.netlify.app/CERTIFICATE.pdf)
-  - [Research Paper](https://d197for5662m48.cloudfront.net/documents/publicationstatus/260984/preprint_pdf/ddf88a7a5c1f2df26dcb07c151bd2b9f.pdf)
+  - [Patent Certificate](https://mehtabk.netlify.app/CERTIFICATE.pdf)
+  - [Research Paper (TechRxiv by IEEE)](https://d197for5662m48.cloudfront.net/documents/publicationstatus/260984/preprint_pdf/ddf88a7a5c1f2df26dcb07c151bd2b9f.pdf)
 
 ## Components
 - **ESP32 32Pin Development Board**: Wi-Fi enabled Arduino microcontroller
