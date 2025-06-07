@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fire Detection System Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="css.css" />
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="header">
+            <h1>FireX Dectiection and Analytics System Dashboard</h1>
+            <p>Real-time monitoring of environmental sensors</p>
+        </div>
+
+        <div class="status-cards">
+            <div class="card" id="temperature-card">
+                <h3>Temperature (°C)</h3>
+                <p>--</p>
+            </div>
+            <div class="card" id="humidity-card">
+                <h3>Humidity (%)</h3>
+                <p>--</p>
+            </div>
+            <div class="card" id="flame-card">
+                <h3>Flame Status</h3>
+                <div class="status-indicator"></div>
+            </div>
+            <div class="card" id="gas-card">
+                <h3>Gas Detection</h3>
+                <div class="status-indicator"></div>
+            </div>
+        </div>
+
+        <div class="dashboard-grid">
+            <div class="graph-card">
+                <h3>Temperature Over Time</h3>
+                <canvas id="temperature-chart"></canvas>
+            </div>
+            <div class="graph-card">
+                <h3>Humidity Over Time</h3>
+                <canvas id="humidity-chart"></canvas>
+            </div>
+        </div>
+
+        <div class="analytics-section">
+            <div class="pie-chart-card">
+                <h3>Sensor Status Distribution</h3>
+                <canvas id="status-pie-chart"></canvas>
+            </div>
+            <div class="histogram-card">
+                <h3>Temperature Distribution</h3>
+                <canvas id="temp-histogram"></canvas>
+            </div>
+            <div class="sensor-status">
+                <h3>Sensor Health Status</h3>
+                <div class="sensor-item">
+                    <span>Temperature Sensor</span>
+                    <div class="sensor-status-indicator sensor-active"></div>
+                </div>
+                <div class="sensor-item">
+                    <span>Humidity Sensor</span>
+                    <div class="sensor-status-indicator sensor-active"></div>
+                </div>
+                <div class="sensor-item">
+                    <span>Flame Sensor</span>
+                    <div class="sensor-status-indicator sensor-active"></div>
+                </div>
+                <div class="sensor-item">
+                    <span>Gas Sensor</span>
+                    <div class="sensor-status-indicator sensor-active"></div>
+                </div>
+                <div class="sensor-item">
+                    <span>Sound Sensor</span>
+                    <div class="sensor-status-indicator sensor-active"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card alert-card" id="alerts" style="display: none">
+            <h3>Active Alerts</h3>
+            <div id="alert-list"></div>
+        </div>
+
+        <div class="history-table">
+            <div class="table-header">
+                <h3>Sensor History</h3>
+                <div class="export-buttons">
+                    <button class="export-btn json" onclick="exportData('json')">
+                        Export JSON
+                    </button>
+                    <button class="export-btn csv" onclick="exportData('csv')">
+                        Export CSV
+                    </button>
+                </div>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Timestamp</th>
+                        <th>Temperature</th>
+                        <th>Humidity</th>
+                        <th>Flame</th>
+                        <th>Gas</th>
+                        <th>Sound</th>
+                    </tr>
+                </thead>
+                <tbody id="sensor-history"></tbody>
+            </table>
+        </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+    <script src="js.js"></script>
+</body>
+
+</html>
