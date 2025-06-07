@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Assests\logo.png" type="projectnine32 logo">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>PROJECTNINE32</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            color: #333;
+        }
+        /* Header */
+        header {
+            background-color: #f1c40f;
+            padding: 20px 0;
+            text-align: center;
+        }
+        header h1 {
+            color: #333;
+            margin: 0;
+            font-size: 2.5em;
+        }
+        /* Navbar */
+        nav {
+            background-color: #f39c12;
+            padding: 15px;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        nav ul li {
+            margin: 10px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2em;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        nav ul li a:hover {
+            background-color: #e67e22;
+        }
+        /* Content */
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h2 {
+            color: #f39c12;
+            border-bottom: 2px solid #f39c12;
+            padding-bottom: 5px;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        /* Table for sensor details */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 15px;
+            text-align: left;
+        }
+        th {
+            background-color: #f1c40f;
+            color: #333;
+        }
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #f1c40f;
+            color: #333;
+            position: relative;
+            width: 100%;
+            bottom: 0;
+        }
+        pre {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-left: 4px solid #f39c12;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            nav ul li {
+                margin: 5px 0;
+            }
+            nav ul li a {
+                font-size: 1em;
+            }
+            .container {
+                padding: 10px;
+            }
+            th, td {
+                padding: 10px;
+            }
+        }
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.5em;
+            }
+            nav ul li a {
+                font-size: 0.9em;
+            }
+            .container {
+                padding: 5px;
+            }
+            th, td {
+                padding: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+  <h1>PROJECTNINE32</h1>
+</header>
+
+<!-- Navigation -->
+<nav>
+  <ul>
+    <li><a href="#components">Components</a></li>
+    <li><a href="#connections">Connections</a></li>
+    <li><a href="#flowcharts">Flowcharts</a></li>
+    <li><a href="#libraries">Libraries and Program</a></li>
+    <li><a href="#steps">Initial Five Steps</a></li>
+  </ul>
+</nav>
+
+<!-- Main Content -->
+<div class="container">
+
+  <!-- Components Section -->
+  <div id="components" class="section">
+    <h2>Components</h2>
+    <table>
+      <tr>
+        <th>Component</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>ESP32 32Pin Development Board Wi-Fi</td>
+        <td>ARDUNIO MICROCONTROLLER</td>
+      </tr>
+      <tr>
+        <td>ESP32 CAM WiFi Module with OV2640 Camera Module 2MP</td>
+        <td>Camera module for capturing images and video.</td>
+      </tr>
+      <tr>
+        <td>ESP32-CAM-MB Micro USB</td>
+        <td>Micro USB interface for ESP32-CAM.</td>
+      </tr>
+      <tr>
+        <td>DHT11 Temperature And Humidity Sensor Module with LED</td>
+        <td>Measures temperature and humidity levels, providing a digital signal.</td>
+      </tr>
+      <tr>
+        <td>Infrared Obstacle Avoidance IR Sensor Module (Active Low)</td>
+        <td>Senses proximity to obstacles using infrared light reflection.</td>
+      </tr>
+      <tr>
+        <td>Sound Detection Module Sensor for Intelligent Vehicle Compatible With Arduino</td>
+        <td>Detects sound intensity for sound-based applications.</td>
+      </tr>
+      <tr>
+        <td>MQ-2 Gas Sensor Module For H2, LPG, CH4, CO, Smoke or Propane Detector Module</td>
+        <td>Detects smoke, propane, methane, and other gases for air quality monitoring.</td>
+      </tr>
+      <tr>
+        <td>10CM Female to Female Breadboard Jumper DuPont 2.54MM 1P-1P Cable 40 Pcs</td>
+        <td>Used for making connections on a breadboard.</td>
+      </tr>
+      <tr>
+        <td>Male to Female Jumper Wires 40Pcs 20cm</td>
+        <td>Used for making connections on a breadboard.</td>
+      </tr>
+      <tr>
+        <td>MB102 830pins High Quality White Color Breadboard {QUANTITY -2}</td>
+        <td>Used for prototyping and testing circuits.</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- Connections Section -->
+  <div id="connections" class="section">
+    <h2>Connections</h2>
+    
+    <h3>ESP32 Development Board Overview</h3>
+    <p>The ESP32 has several GPIO (General Purpose Input/Output) pins, which we'll use for connecting the sensors. The most important pins for each sensor are:</p>
+    <ul>
+      <li>VCC (or 3.3V or 5V): Power supply pin.</li>
+      <li>GND: Ground pin.</li>
+      <li>Data pins: The signal pins from each sensor go to specific GPIO pins on the ESP32.</li>
+    </ul>
+    <p>Here’s a guide to connect each sensor:</p>
+
+    <h3>Connecting the DHT11 (Temperature and Humidity Sensor)</h3>
+    <ul>
+      <li>VCC: Connect to 3.3V pin on ESP32.</li>
+      <li>GND: Connect to GND on ESP32.</li>
+      <li>DATA: Connect the DATA pin to GPIO 4 (or any other GPIO pin you want to use).</li>
+    </ul>
+    <p>Note: You will need to use a pull-up resistor (10kΩ) between the data line and the VCC to stabilize the signal.</p>
+
+    <h3>Connecting the Infrared Obstacle Avoidance Sensor</h3>
+    <ul>
+      <li>VCC: Connect to 3.3V or 5V pin (depending on your IR sensor's voltage requirement) on ESP32.</li>
+      <li>GND: Connect to GND on ESP32.</li>
+      <li>OUT: Connect the OUT pin to GPIO 5 (or another GPIO pin).</li>
+    </ul>
+
+    <h3>Connecting the Sound Sensor (KY-038)</h3>
+    <ul>
+      <li>VCC: Connect to 3.3V or 5V on ESP32 (depends on the sensor).</li>
+      <li>GND: Connect to GND on ESP32.</li>
+      <li>DO (Digital Out): Connect the DO pin to GPIO 18.</li>
+      <li>AO (Analog Out): You can optionally connect the AO pin to an ADC-capable pin like GPIO 36 or 39 if you want analog data.</li>
+    </ul>
+
+    <h3>Connecting the MQ-2 Gas Sensor</h3>
+    <ul>
+      <li>VCC: Connect to 5V on ESP32 (MQ-2 requires 5V for accurate readings).</li>
+      <li>GND: Connect to GND on ESP32.</li>
+      <li>AO (Analog Output): Connect to GPIO 36 (which supports ADC).</li>
+      <li>DO (Digital Output): Connect to GPIO 19 (if you want digital values).</li>
+    </ul>
+
+    <h3>Connecting the ESP32-CAM (with ESP32-CAM-MB)</h3>
+    <p>You can use the ESP32-CAM-MB to connect the ESP32-CAM module via USB. No extra wiring is needed between the ESP32-CAM and the development board. Simply plug in the USB connector.</p>
+
+    <h3>Breadboard and Wiring</h3>
+    <p>Using your MB102 breadboards, you can connect the VCC and GND of all components to the power and ground rails of the breadboard. Here's how:</p>
+    <ul>
+      <li>Use one breadboard for power management. Connect the 3.3V and GND from the ESP32 to the power rails of this breadboard.</li>
+      <li>Distribute power to each sensor by connecting their VCC to the power rail and GND to the ground rail.</li>
+      <li>Use the second breadboard for organizing sensor connections to the ESP32 GPIO pins using jumper wires.</li>
+    </ul>
+
+    <h3>Connections Overview</h3>
+    <ol>
+      <li>DHT11 Temperature and Humidity Sensor:
+        <ul>
+          <li>VCC (DHT11) → 3V3 (ESP32)</li>
+          <li>GND (DHT11) → GND (ESP32)</li>
+          <li>DATA (DHT11) → GPIO4 (ESP32)</li>
+        </ul>
+      </li>
+      <li>MQ-2 Gas Sensor:
+        <ul>
+          <li>VCC (MQ-2) → 5V (ESP32)</li>
+          <li>GND (MQ-2) → GND (ESP32)</li>
+          <li>AO (MQ-2) → GPIO36 (ESP32)</li>
+        </ul>
+      </li>
+      <li>Infrared Obstacle Avoidance IR Sensor:
+        <ul>
+          <li>VCC (IR Sensor) → 5V (ESP32)</li>
+          <li>GND (IR Sensor) → GND (ESP32)</li>
+          <li>OUT (IR Sensor) → GPIO14 (ESP32) (you can choose another GPIO pin as well)</li>
+        </ul>
+      </li>
+      <li>Sound Detection Module:
+        <ul>
+          <li>VCC (Sound Sensor) → 3V3 (ESP32)</li>
+          <li>GND (Sound Sensor) → GND (ESP32)</li>
+          <li>OUT (Sound Sensor) → GPIO13 (ESP32) (you can choose another GPIO pin as well)</li>
+        </ul>
+      </li>
+      <li>LED Connection:
+        <ul>
+          <li>Anode (+) of LED → GPIO12 (ESP32) (you can choose another GPIO pin as well)</li>
+          <li>Cathode (-) of LED → GND (ESP32)</li>
+        </ul>
+      </li>
+    </ol>
+
+    <h3>Summary of Connections</h3>
+    <table>
+      <tr>
+        <th>Sensor</th>
+        <th>Pin</th>
+        <th>ESP32 Pin</th>
+      </tr>
+      <tr>
+        <td>DHT11</td>
+        <td>VCC</td>
+        <td>3V3</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>GND</td>
+        <td>GND</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>DATA</td>
+        <td>GPIO4</td>
+      </tr>
+      <tr>
+        <td>MQ-2</td>
+        <td>VCC</td>
+        <td>5V</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>GND</td>
+        <td>GND</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>AO</td>
+        <td>GPIO36</td>
+      </tr>
+      <tr>
+        <td>Infrared Obstacle Avoidance</td>
+        <td>VCC</td>
+        <td>5V</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>GND</td>
+        <td>GND</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>OUT</td>
+        <td>GPIO14</td>
+      </tr>
+      <tr>
+        <td>Sound Detection Module</td>
+        <td>VCC</td>
+        <td>3V3</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>GND</td>
+        <td>GND</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>OUT</td>
+        <td>GPIO13</td>
+      </tr>
+      <tr>
+        <td>LED</td>
+        <td>Anode (+)</td>
+        <td>GPIO12</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Cathode (-)</td>
+        <td>GND</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- Flowcharts Section -->
+  <div id="flowcharts" class="section">
+    <h2>Flowcharts</h2>
+    <h3>Data Flow</h3>
+    <pre>
+      Start 
+        ↓
+    Initialize ESP32 
+        ↓
+    Read Sensor Data 
+        ↓
+    If Data Received → Send Data to Cloud
+        ↓
+    Else → Wait
+    </pre>
+    <h3>System Operation</h3>
+    <pre>
+      Start
+        ↓
+    Initialize Sensors
+        ↓
+    Collect Data from Sensors
+        ↓
+    Process Data
+        ↓
+    Display Data on OLED
+        ↓
+    Send Data to Cloud
+        ↓
+    Repeat
+    </pre>
+  </div>
+
+  <!-- Libraries and Program Section -->
+  <div id="libraries" class="section">
+    <h2>Libraries and Program</h2>
+    <h3>Steps for Setting Up Arduino IDE:</h3>
+    <h4>Install ESP32 Board Package:</h4>
+    <ul>
+      <li>Open Arduino IDE.</li>
+      <li>Go to File → Preferences.</li>
+      <li>In Additional Board Manager URLs, add this link:</li>
+      <pre><code>https://dl.espressif.com/dl/package_esp32_index.json</code></pre>
+      <li>Then go to Tools → Board → Boards Manager, search for ESP32, and install it.</li>
+    </ul>
+    <h4>Install Necessary Libraries:</h4>
+    <ul>
+      <li>DHT Sensor Library: Go to Tools → Manage Libraries, search for DHT Sensor Library, and install it.</li>
+      <li>Adafruit Unified Sensor Library: This library will be automatically installed with the DHT library, but verify it’s installed.</li>
+    </ul>
+    <h4>Program Outline:</h4>
+    <p>This program will:</p>
+    <ul>
+      <li>Read temperature and humidity data from the DHT11.</li>
+      <li>Read values from the infrared obstacle sensor.</li>
+      <li>Detect sound from the sound detection module.</li>
+      <li>Read gas concentration (analog) from the MQ-2 sensor.</li>
+      <li>Display the sensor data to the Serial Monitor.</li>
+    </ul>
+    <h4>Code:</h4>
+    <pre><code>// Include libraries
+#include <DHT.h>  // DHT sensor library
+
+// Define pin numbers
+#define DHTPIN 4          // DHT11 data pin
+#define DHTTYPE DHT11     // Define the type of DHT sensor
+#define IR_SENSOR_PIN 16  // Infrared Obstacle Sensor
+#define SOUND_SENSOR_PIN 17 // Sound Detection Module
+#define GAS_SENSOR_PIN 36  // MQ-2 Gas Sensor (Analog)
+#define LED_PIN 21        // LED
+
+// Initialize DHT sensor
+DHT dht(DHTPIN, DHTTYPE);
+
+void setup() {
+  // Initialize serial communication at 115200 baud rate
+  Serial.begin(115200);
+
+  // Initialize DHT sensor
+  dht.begin();
+
+  // Set pin modes
+  pinMode(IR_SENSOR_PIN, INPUT);       // Infrared sensor as input
+  pinMode(SOUND_SENSOR_PIN, INPUT);    // Sound sensor as input
+  pinMode(GAS_SENSOR_PIN, INPUT);      // Gas sensor as input (analog)
+  pinMode(LED_PIN, OUTPUT);            // LED as output
+
+  // Initial LED state
+  digitalWrite(LED_PIN, LOW);
+}
+
+void loop() {
+  // Read temperature and humidity from DHT11
+  float temperature = dht.readTemperature();  // Get temperature in Celsius
+  float humidity = dht.readHumidity();        // Get humidity
+
+  // Check if any reading from DHT failed
+  if (isnan(temperature) || isnan(humidity)) {
+    Serial.println("Failed to read from DHT sensor!");
+  } else {
+    // Print temperature and humidity data
+    Serial.print("Temperature: ");
+    Serial.print(temperature);
+    Serial.println("°C");
+
+    Serial.print("Humidity: ");
+    Serial.print(humidity);
+    Serial.println("%");
+  }
+
+  // Read from Infrared Obstacle Sensor (Active Low)
+  int irSensorState = digitalRead(IR_SENSOR_PIN);
+  if (irSensorState == LOW) {
+    Serial.println("Obstacle detected!");
+  } else {
+    Serial.println("No obstacle.");
+  }
+
+  // Read from Sound Detection Module
+  int soundSensorState = digitalRead(SOUND_SENSOR_PIN);
+  if (soundSensorState == HIGH) {
+    Serial.println("Sound detected!");
+  } else {
+    Serial.println("No sound detected.");
+  }
+
+  // Read from MQ-2 Gas Sensor (Analog)
+  int gasSensorValue = analogRead(GAS_SENSOR_PIN);
+  Serial.print("Gas sensor value: ");
+  Serial.println(gasSensorValue);
+
+  // Control the LED (turn it on if gas value exceeds a threshold)
+  if (gasSensorValue > 400) {  // Set a threshold value for gas detection
+    digitalWrite(LED_PIN, HIGH);
+    Serial.println("LED ON - High gas concentration detected!");
+  } else {
+    digitalWrite(LED_PIN, LOW);
+    Serial.println("LED OFF - Gas concentration normal.");
+  }
+
+  // Delay before the next loop iteration
+  delay(2000);  // 2 seconds delay between readings
+}</code></pre>
+    <h4>Code Explanation:</h4>
+    <h5>Library Inclusions:</h5>
+    <p>The DHT.h library handles the DHT11 sensor data. Make sure you install the DHT library before compiling.</p>
+    <h5>Pin Definitions:</h5>
+    <p>We define the pin numbers for the DHT11, IR sensor, sound module, MQ-2 gas sensor, and an LED to show a visual signal when gas concentration exceeds a threshold.</p>
+    <h5>Setup:</h5>
+    <p>Initializes the DHT sensor and sets the pin modes for each sensor and the LED. The serial communication is started to display sensor data on the Serial Monitor.</p>
+    <h5>Main Loop:</h5>
+    <p>Reads data from each sensor:</p>
+    <ul>
+      <li>DHT11 for temperature and humidity.</li>
+      <li>Infrared sensor for obstacle detection.</li>
+      <li>Sound detection module for any noise.</li>
+      <li>MQ-2 gas sensor for gas concentration.</li>
+    </ul>
+    <p>The data is printed to the Serial Monitor for each sensor. The LED is turned ON if gas levels exceed a preset threshold (you can adjust this value according to your needs).</p>
+    <h4>How to Run the Program:</h4>
+    <ul>
+      <li>Connect ESP32 to your PC using a USB cable.</li>
+      <li>Open the Arduino IDE and copy the provided code into a new sketch.</li>
+      <li>Go to Tools → Board → ESP32 Dev Module and select the correct port (COM port for Windows or /dev/ttyUSB0 for Linux).</li>
+      <li>Click on the Upload button to compile and upload the code to your ESP32.</li>
+      <li>Open the Serial Monitor by going to Tools → Serial Monitor and set the baud rate to 115200.</li>
+      <li>Once the code is running, you should see sensor data output in the Serial Monitor.</li>
+    </ul>
+  </div>
+
+</div>
+<!-- Footer -->
+<footer>
+  <p>&copy; 2024 PROJECTNINE32 | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
